@@ -4,14 +4,15 @@ class OctezVdf < Formula
   homepage "https://octez.tezos.com/"
   version "25.3"
   license "MIT"
+  revision 1
 
   on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-vdf-25.3-arm64-macos.tar.gz"
-    sha256 "0752713e92c6081295fb5862ed368ab2ad02a318f5048ec641dc9d753b5761c8"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-vdf-25.3_1-arm64-macos.tar.gz"
+    sha256 "92c922b515ac74bd9d306ce3e736ceede6e7ef43bc7b68bea8d32f64e8b4039a"
   end
   on_intel do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-vdf-25.3-x86_64-macos.tar.gz"
-    sha256 "13162c6c8f38a625a3e75c6703aa7025edf063614d84bfca392abd90fa6be5a0"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-vdf-25.3_1-x86_64-macos.tar.gz"
+    sha256 "92c922b515ac74bd9d306ce3e736ceede6e7ef43bc7b68bea8d32f64e8b4039a"
   end
 
   depends_on :macos
@@ -51,6 +52,8 @@ class OctezVdf < Formula
   def caveats
     <<~EOS
       Edit #{etc}/octez/octez-vdf.conf before starting the service.
+      The service log, #{var}/log/octez/octez-vdf.log, only gets warnings
+      (LOG_RULES in the conf file). Full logs are in ~/.tezos-client/logs/octez-baker.
     EOS
   end
 

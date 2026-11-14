@@ -4,14 +4,15 @@ class OctezDalNode < Formula
   homepage "https://octez.tezos.com/"
   version "25.3"
   license "MIT"
+  revision 1
 
   on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-dal-node-25.3-arm64-macos.tar.gz"
-    sha256 "74f5fbb61c340fbed6d1ec6ba64817f50c472808cb3a645d22df55dea186f8c1"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-dal-node-25.3_1-arm64-macos.tar.gz"
+    sha256 "4f639b7b5a9e2acf0018e84f8399e1a587815891e195c44f7c0d5d7aec4bcada"
   end
   on_intel do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-dal-node-25.3-x86_64-macos.tar.gz"
-    sha256 "0b28358be12facddd03c6d8f2d13096a8c31eabfcd7de0e50797b41231391bbd"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-dal-node-25.3_1-x86_64-macos.tar.gz"
+    sha256 "183ea48585633e15c32a1900d583f3ffb5a8356f4f7f4dabc6bf9be53a5e19af"
   end
 
   depends_on :macos
@@ -57,6 +58,8 @@ class OctezDalNode < Formula
       Before starting the service, initialise the DAL node, e.g.:
         octez-dal-node config init --endpoint http://127.0.0.1:8732
       Then edit #{etc}/octez/octez-dal-node.conf.
+      The service log, #{var}/log/octez/octez-dal-node.log, only gets warnings
+      (LOG_RULES in the conf file). Full logs are in <data-dir>/daily_logs.
     EOS
   end
 

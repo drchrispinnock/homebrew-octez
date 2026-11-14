@@ -4,14 +4,15 @@ class OctezNode < Formula
   homepage "https://octez.tezos.com/"
   version "25.3"
   license "MIT"
+  revision 1
 
   on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-node-25.3-arm64-macos.tar.gz"
-    sha256 "68916860168c09b146324d6d27ba6e14b3604a3222f20226ec8e08a4d4ab776d"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-node-25.3_1-arm64-macos.tar.gz"
+    sha256 "01fde7705ca7a57a1fec22528e5dcbd9f54c4819f34f813a1327bc8de9e9567d"
   end
   on_intel do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-node-25.3-x86_64-macos.tar.gz"
-    sha256 "e62c0272e601a8eb59bfefb6dc59d8479949037b97ab6f7573ad8e6bee8a6c81"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-node-25.3_1-x86_64-macos.tar.gz"
+    sha256 "3ad382509977d01766f9fea963fc7034724168f709f317a67765fe574ecb9888"
   end
 
   depends_on :macos
@@ -58,6 +59,8 @@ class OctezNode < Formula
         octez-node config init --network mainnet --history-mode rolling
         octez-node snapshot import <snapshot-file>
       Then edit #{etc}/octez/octez-node.conf.
+      The service log, #{var}/log/octez/octez-node.log, only gets warnings
+      (LOG_RULES in the conf file). Full logs are in <data-dir>/daily_logs.
     EOS
   end
 

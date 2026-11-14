@@ -4,14 +4,15 @@ class OctezBaker < Formula
   homepage "https://octez.tezos.com/"
   version "25.3"
   license "MIT"
+  revision 1
 
   on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-baker-25.3-arm64-macos.tar.gz"
-    sha256 "83a413094daa0cfdc507fffdbbabea3dbe55292d5acc707efd90a5981579caad"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-baker-25.3_1-arm64-macos.tar.gz"
+    sha256 "07181aef7fa6f5b3a4927f55afc89bde293d319d5dc0c49e464c6282df26d23a"
   end
   on_intel do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-baker-25.3-x86_64-macos.tar.gz"
-    sha256 "e753ef9bd3544f8600f24fa4547a7cc99ca75375188a7a27176d79713468c952"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-baker-25.3_1-x86_64-macos.tar.gz"
+    sha256 "21e744ca8cdd4eba100e5bfe8cfd75bad75095929f64d8e04ae2474781a4f088"
   end
 
   depends_on :macos
@@ -59,6 +60,8 @@ class OctezBaker < Formula
       the service. MODE selects a local node (data directory) or a remote node
       (RPC endpoint).
       A Mac that sleeps will miss baking slots; see `man pmset` and `man caffeinate`.
+      The service log, #{var}/log/octez/octez-baker.log, only gets warnings
+      (LOG_RULES in the conf file). Full logs are in <client-dir>/logs/octez-baker.
     EOS
   end
 

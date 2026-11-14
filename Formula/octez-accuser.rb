@@ -4,14 +4,15 @@ class OctezAccuser < Formula
   homepage "https://octez.tezos.com/"
   version "25.3"
   license "MIT"
+  revision 1
 
   on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-accuser-25.3-arm64-macos.tar.gz"
-    sha256 "5b296b6f37bb3d4c5d00ecd0a481f3db047e741cb531bace4806033a47745015"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-accuser-25.3_1-arm64-macos.tar.gz"
+    sha256 "2db2e35cff2c476e75ee03f2ac593e4832e021ea3576aefc2f78869ce39a4aad"
   end
   on_intel do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-accuser-25.3-x86_64-macos.tar.gz"
-    sha256 "a42fb36f6a3d9f26cad8e598adc06a965eca0625487d51bee55a64b2b08b1109"
+    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-v25.3/octez-accuser-25.3_1-x86_64-macos.tar.gz"
+    sha256 "2db2e35cff2c476e75ee03f2ac593e4832e021ea3576aefc2f78869ce39a4aad"
   end
 
   depends_on :macos
@@ -51,6 +52,8 @@ class OctezAccuser < Formula
   def caveats
     <<~EOS
       Edit #{etc}/octez/octez-accuser.conf before starting the service.
+      The service log, #{var}/log/octez/octez-accuser.log, only gets warnings
+      (LOG_RULES in the conf file). Full logs are in ~/.tezos-client/logs/octez-accuser.
     EOS
   end
 
