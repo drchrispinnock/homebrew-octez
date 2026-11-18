@@ -5,10 +5,8 @@ class OctezSmartRollupNode < Formula
   version "20260724"
   license "MIT"
 
-  on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-smart-rollup-node-v20260724/octez-smart-rollup-node-20260724-arm64-macos.tar.gz"
-    sha256 "8faa97dc31eec120290c56d2e2de4398b14848c4b4bd212a8e6d7b331934b523"
-  end
+  url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-smart-rollup-node-v20260724/octez-smart-rollup-node-20260724-arm64-macos.tar.gz"
+  sha256 "8faa97dc31eec120290c56d2e2de4398b14848c4b4bd212a8e6d7b331934b523"
 
   depends_on :macos
   depends_on arch: :arm64

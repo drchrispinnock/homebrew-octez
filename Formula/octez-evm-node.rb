@@ -5,10 +5,8 @@ class OctezEvmNode < Formula
   version "0.68"
   license "MIT"
 
-  on_arm do
-    url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-evm-node-v0.68/octez-evm-node-0.68-arm64-macos.tar.gz"
-    sha256 "bb4e99f95fe2eee8fd1c525e4b935ccf369d06dc08b9eaefe36872bd0ba07556"
-  end
+  url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-evm-node-v0.68/octez-evm-node-0.68-arm64-macos.tar.gz"
+  sha256 "bb4e99f95fe2eee8fd1c525e4b935ccf369d06dc08b9eaefe36872bd0ba07556"
 
   depends_on :macos
   depends_on arch: :arm64
