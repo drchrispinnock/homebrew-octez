@@ -2,11 +2,11 @@
 class OctezEvmNode < Formula
   desc "Octez EVM node for Etherlink"
   homepage "https://octez.tezos.com/"
-  version "0.68"
+  version "0.69"
   license "MIT"
 
-  url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-evm-node-v0.68/octez-evm-node-0.68-arm64-macos.tar.gz"
-  sha256 "bb4e99f95fe2eee8fd1c525e4b935ccf369d06dc08b9eaefe36872bd0ba07556"
+  url "https://github.com/drchrispinnock/homebrew-octez/releases/download/octez-evm-node-v0.69/octez-evm-node-0.69-arm64-macos.tar.gz"
+  sha256 "e4c1cb8160a551b29f6edb1d306943b4d572edca69dd7347b94fc14c5460ce88"
 
   depends_on :macos
   depends_on arch: :arm64
